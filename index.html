@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herobparta</title>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Hide scroll bars */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #004d00, #000000);
+            color: #ffffff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative; /* To position spots relative to body */
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 40px; /* Increased padding for more space */
+            box-sizing: border-box;
+            z-index: 1; /* Ensure header is above spots */
+        }
+
+        h1 {
+            font-size: 8rem; /* Increased font size for prominence */
+            color: #00ff00;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7), 0 0 30px #00ff00, 0 0 10px #00ff00;
+            transform: perspective(500px) rotateX(10deg); /* 3D perspective */
+            transition: transform 0.3s ease;
+            margin: 0; /* Remove default margin */
+        }
+
+        h1:hover {
+            transform: perspective(500px) rotateX(0deg) scale(1.1);
+        }
+
+        .description {
+            position: absolute;
+            top: 30%; /* Position below the header */
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            z-index: 1; /* Ensure it's above spots */
+        }
+
+        .description h2 {
+            font-size: 2rem;
+            color: #00ff00;
+            margin-bottom: 10px;
+        }
+
+        .description p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        .spot {
+            position: absolute;
+            background-color: #000000;
+            width: 40px; /* Size of the squares */
+            height: 40px;
+            z-index: 0; /* Behind the header */
+        }
+
+        /* Positioning squares randomly across the viewport */
+        .spot1 { top: 10%; left: 15%; }
+        .spot2 { top: 25%; left: 40%; }
+        .spot3 { top: 35%; left: 65%; }
+        .spot4 { top: 50%; left: 10%; }
+        .spot5 { top: 60%; left: 45%; }
+        .spot6 { top: 75%; left: 70%; }
+        .spot7 { top: 20%; left: 80%; }
+        .spot8 { top: 40%; left: 20%; }
+        .spot9 { top: 55%; left: 85%; }
+        .spot10 { top: 70%; left: 30%; }
+        .spot11 { top: 15%; left: 55%; }
+        .spot12 { top: 80%; left: 50%; }
+
+        .social-buttons {
+            position: absolute;
+            bottom: 20px; /* Position at the bottom */
+            right: 20px; /* Position at the right */
+            display: flex; /* Align buttons in a row */
+            gap: 10px; /* Space between buttons */
+        }
+
+        .social-button {
+            font-size: 3rem; /* Icon size */
+            color: #ffffff; /* Icon color */
+            border-radius: 50%; /* Round background */
+            padding: 10px; /* Padding for spacing */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .social-button.youtube {
+            background-color: #ff0000; /* YouTube red */
+        }
+
+        .social-button.discord {
+            background-color: #7289da; /* Discord blue */
+        }
+
+        .social-button:hover {
+            color: #ffffff; /* Text color on hover */
+        }
+
+        .social-button.youtube:hover {
+            background-color: #ffffff; /* Change background on hover */
+            color: #ff0000; /* Change text color on hover */
+        }
+
+        .social-button.discord:hover {
+            background-color: #ffffff; /* Change background on hover */
+            color: #7289da; /* Change text color on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Herobparta</h1>
+    </header>
+    
+    <div class="description">
+        <h2>About Herobparta</h2>
+        <p>Herobparta is a passionate YouTuber who creates exciting Minecraft content. With a goal of reaching 1,000 subscribers, Herobparta brings engaging gameplay, tutorials, and tips to the Minecraft community. Join the adventure and become part of the journey!</p>
+    </div>
+
+    <div class="spot spot1"></div>
+    <div class="spot spot2"></div>
+    <div class="spot spot3"></div>
+    <div class="spot spot4"></div>
+    <div class="spot spot5"></div>
+    <div class="spot spot6"></div>
+    <div class="spot spot7"></div>
+    <div class="spot spot8"></div>
+    <div class="spot spot9"></div>
+    <div class="spot spot10"></div>
+    <div class="spot spot11"></div>
+    <div class="spot spot12"></div>
+
+    <div class="social-buttons">
+        <a href="https://discord.gg/yourserver" target="_blank" class="social-button discord">
+            <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://www.youtube.com/yourchannel" target="_blank" class="social-button youtube">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+
+    <script>
+        // JavaScript code can go here if needed.
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Document loaded and ready!');
+        });
+    </script>
+</body>
+</html>
